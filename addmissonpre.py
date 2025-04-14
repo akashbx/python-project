@@ -4,7 +4,6 @@ from sklearn.linear_model import LinearRegression
 
 # Load and clean the CSV
 admission_data = pd.read_csv("bca_admissions.csv")
-admission_data.columns = admission_data.columns.str.strip()  # Clean whitespace from column names
 
 # Extract specialization names (excluding 'Year' and 'Impact_Reason')
 specialization_names = [col for col in admission_data.columns if col not in ['Year', 'Impact_Reason']]
